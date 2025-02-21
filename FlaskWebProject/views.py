@@ -122,11 +122,11 @@ def _save_cache(cache):
 
 def _build_msal_app(cache=None, authority=None):
     return msal.ConfidentialClientApplication(
-  Config.CLIENT_ID, authority=authority or Config.AUTHORITY,
-  client_credential=Config.CLIENT_SECRET, token_cache=cache)
+      Config.CLIENT_ID, authority=authority or Config.AUTHORITY,
+      client_credential=Config.CLIENT_SECRET, token_cache=cache)
 
 def _build_auth_url(authority=None, scopes=None, state=None):
     return _build_msal_app(authority=authority).get_authorization_request_url(
- scopes or [],
- state=state or str(uuid.uuid4()),
- redirect_uri=url_for('authorized', _external=True, _scheme='https'))
+     scopes or [],
+     state=state or str(uuid.uuid4()),
+     redirect_uri=url_for('authorized', _external=True, _scheme='https'))
