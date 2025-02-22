@@ -18,6 +18,7 @@ imageSourceUrl = 'https://'+ app.config['BLOB_ACCOUNT']  + '.blob.core.windows.n
 @app.route('/')
 @app.route('/home')
 @login_required
+
 def home():
     log = request.values.get('log_button')
     if log:
@@ -29,7 +30,7 @@ def home():
            app.logger.error('Error occurred.')
         elif log == 'critical':
            app.logger.critical('Critical error occurred.')
-    return render_template(
+   return render_template(
         'index.html',
         log=log
     )
