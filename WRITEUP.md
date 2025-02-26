@@ -36,6 +36,14 @@ Cons:
 - Dependency on Platform: You are dependent on the platform's updates and changes. If Azure makes changes to the App Service platform, it could impact your application
 
 
+Choice: App Service
+
+
+Justification: or this project, which was aimed at getting familiar with deploying applications, I chose to use Azure App Service due to its ease of deployment and cost-effectiveness. Given that the project was a simple learning exercise with only myself working on the app, there was no need for multiple virtual machines to accommodate multiple users. Additionally, Azure App Service seamlessly integrates with GitHub and supports Python code, making it an ideal choice for our requirements. 
+
+
+
+
 ### Assess app changes that would change your decision.
 
 *Detail how the app and any other needs would have to change for you to change your decision in the last section.* 
